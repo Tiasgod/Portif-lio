@@ -5,10 +5,10 @@ const navObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
+
       navLinks.forEach((link) => {
-        link.style.color = link.getAttribute("href") === `#${entry.target.id}`
-          ? "var(--accent)"
-          : "";
+        const isActive = link.getAttribute("href") === `#${entry.target.id}`;
+        link.style.color = isActive ? "var(--blue-light)" : "";
       });
     });
   },
@@ -22,20 +22,17 @@ const revealTargets = document.querySelectorAll("[data-reveal]");
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
     });
   },
-  { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+  { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
 );
 
 revealTargets.forEach((el) => revealObserver.observe(el));
 
-/* ---------- Hero background animation ----------
-   Subtle falling "code" characters behind the hero banner,
-   evoking a terminal/data feel without imitating any specific image. */
 (function heroCodeRain() {
   const canvas = document.querySelector(".hero__canvas");
   if (!canvas) return;
@@ -44,34 +41,45 @@ revealTargets.forEach((el) => revealObserver.observe(el));
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
+
   if (prefersReducedMotion) return;
 
   const chars = "01{}<>/=;#*+-_python()fn=>".split("");
   let columns = [];
-  let fontSize = 15;
+  const fontSize = 15;
   let width = 0;
   let height = 0;
 
   function resize() {
     const rect = canvas.parentElement.getBoundingClientRect();
-    width = canvas.width = rect.width;
-    height = canvas.height = rect.height;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    width = rect.width;
+    height = rect.height;
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
     const columnCount = Math.floor(width / fontSize);
-    columns = new Array(columnCount).fill(0).map(
-      () => Math.random() * -height
-    );
+    columns = new Array(columnCount).fill(0).map(() => Math.random() * -height);
   }
 
   function draw() {
-    ctx.fillStyle = "rgba(26, 34, 51, 0.12)";
+    ctx.fillStyle = "rgba(2, 6, 23, 0.12)";
     ctx.fillRect(0, 0, width, height);
 
     ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
+    ctx.textBaseline = "top";
 
     columns.forEach((y, i) => {
       const char = chars[Math.floor(Math.random() * chars.length)];
       const x = i * fontSize;
-      ctx.fillStyle = "rgba(169, 197, 234, 0.55)";
+
+      ctx.fillStyle = "rgba(96, 165, 250, 0.42)";
       ctx.fillText(char, x, y);
 
       if (y > height && Math.random() > 0.975) {

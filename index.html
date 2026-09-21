@@ -3,49 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#26314A" />
-  <meta name="description" content="Tiago Dias — Desenvolvedor Full Stack / TI. Portfólio de projetos." />
-  <title>Tiago Dias — Desenvolvedor Full Stack / TI</title>
+  <meta name="theme-color" content="#0f172a" />
+  <meta
+    name="description"
+    content="Tiago Dias — Analista de Dados, Engenheiro de IA e profissional de Back-End. Portfólio de projetos em dados, inteligência artificial e desenvolvimento de software."
+  />
+  <meta property="og:title" content="Tiago Dias — Dados, IA e Back-End" />
+  <meta
+    property="og:description"
+    content="Portfólio de Tiago Dias: análise de dados, engenharia de IA e desenvolvimento Back-End."
+  />
+  <title>Tiago Dias — Analista de Dados | Engenheiro de IA | Back-End</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a href="#topo" class="logo">Tiago Dias</a>
-      <nav class="nav">
+      <a href="#topo" class="logo" aria-label="Voltar ao início">Tiago Dias</a>
+
+      <nav class="nav" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#projetos">Projetos</a>
+        <a href="#stack">Stack</a>
+        <a href="#formacao">Formação</a>
         <a href="#contato">Contato</a>
       </nav>
     </div>
   </header>
 
   <main id="topo">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <canvas class="hero__canvas" aria-hidden="true"></canvas>
+
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+
       <div class="hero__inner">
         <div class="hero__photo">
           <img src="assets/images/tiago.jpg" alt="Foto de Tiago Dias" />
         </div>
+
         <div class="hero__text">
           <p class="eyebrow">Olá, eu sou</p>
-          <h1>Tiago Dias</h1>
-          <p class="hero__role">Desenvolvedor Full Stack / TI</p>
+          <h1 id="hero-title">Tiago Dias</h1>
 
-          <ul class="stack-row" aria-label="Principais tecnologias">
+          <p class="hero__role">
+            <strong>Analista de Dados</strong>
+            <span aria-hidden="true">|</span>
+            <span>Engenheiro de IA</span>
+            <span aria-hidden="true">|</span>
+            <span>Back-End</span>
+          </p>
+
+          <p class="hero__summary">
+            Desenvolvo soluções que combinam dados, programação e Inteligência Artificial,
+            com foco em aplicações orientadas a dados, APIs e sistemas de software.
+          </p>
+
+          <ul class="stack-row" aria-label="Principais áreas e tecnologias">
             <li>Python</li>
-            <li>React</li>
-            <li>Java</li>
-            <li>SQL</li>
+            <li>Pandas</li>
+            <li>Machine Learning</li>
+            <li>LLMs</li>
+            <li>FastAPI</li>
           </ul>
 
           <div class="button-row">
-            <a class="btn btn--primary" href="https://github.com/Tiasgod" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn btn--ghost" href="https://www.linkedin.com/in/tiagopdias-02-2004-ti/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn btn--ghost" href="#" download>Baixar CV</a>
+            <a
+              class="btn btn--primary"
+              href="https://github.com/Tiasgod"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              class="btn btn--ghost"
+              href="https://www.linkedin.com/in/tiagopdias-02-2004-ti/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a class="btn btn--ghost" href="#projetos">Ver projetos</a>
           </div>
         </div>
       </div>
@@ -53,148 +99,393 @@
 
     <section class="section" id="sobre" data-reveal>
       <div class="section__inner">
-        <h2 class="section__title">Sobre mim</h2>
-        <div class="about">
-          <p>
-            Sou estudante de Análise e Desenvolvimento de Sistemas e formado em Gestão de
-            Tecnologia da Informação, com foco em desenvolvimento de software, análise de
-            dados e soluções tecnológicas. Tenho experiência acadêmica e prática com Python,
-            React, Java, SQL e desenvolvimento de APIs, buscando constantemente aprimorar
-            meus conhecimentos e transformar ideias em soluções eficientes e funcionais.
-          </p>
+        <div class="section-heading">
+          <p class="section-kicker">Perfil</p>
+          <h2 class="section__title">Sobre mim</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about about--main">
+            <p>
+              Sou estudante de Análise e Desenvolvimento de Sistemas e formado em Gestão de
+              Tecnologia da Informação. Meu foco profissional está na interseção entre
+              <strong>dados, desenvolvimento Back-End e Inteligência Artificial</strong>.
+            </p>
+
+            <p>
+              Tenho interesse em transformar dados em informações úteis, construir APIs e
+              aplicações orientadas a dados e explorar o uso de modelos de IA para criar
+              soluções eficientes e inteligentes.
+            </p>
+          </div>
+
+          <aside class="focus-card" aria-label="Foco profissional">
+            <span class="focus-card__label">Meu foco</span>
+            <div class="focus-card__item">
+              <span class="focus-card__number">01</span>
+              <span>Dados &amp; Analytics</span>
+            </div>
+            <div class="focus-card__item">
+              <span class="focus-card__number">02</span>
+              <span>Engenharia de IA</span>
+            </div>
+            <div class="focus-card__item">
+              <span class="focus-card__number">03</span>
+              <span>Back-End &amp; APIs</span>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="section section--alt" id="projetos" data-reveal>
       <div class="section__inner">
-        <h2 class="section__title">Projetos</h2>
-        <div class="project-grid">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="section-kicker">Trabalho prático</p>
+            <h2 class="section__title">Projetos</h2>
+          </div>
+          <p class="section-heading__description">
+            Projetos em desenvolvimento e estudos aplicados em dados, Back-End e Inteligência Artificial. 
+          </p>
+        </div>
 
+        <div class="project-grid">
           <article class="project-card" data-reveal style="--delay: 0">
             <div class="project-card__media project-card__media--wattiz">
+              <span class="project-card__label">Dados + IA</span>
               <img src="assets/images/lume.png" alt="Lume, mascote do Wattiz" />
             </div>
+
             <div class="project-card__body">
-              <h3>Wattiz</h3>
+              <div class="project-card__topline">
+                <h3>Wattiz</h3>
+                <span class="project-status">Projeto ativo</span>
+              </div>
+
+              <p class="project-card__role">Atuação: Product Owner / Back-End / Engenheiro de IA</p>
+
               <p class="project-card__desc">
-                Plataforma de monitoramento e análise de consumo de energia, desenvolvida para
-                ajudar usuários a compreender seus gastos e encontrar oportunidades de
-                economia. Utiliza React no frontend e Python/FastAPI no backend, com
-                integração de dados e uma proposta de aplicação de Inteligência Artificial por
-                meio do assistente Lume.
+                Plataforma de monitoramento e análise de consumo de energia, pensada para
+                ajudar usuários a compreender gastos e encontrar oportunidades de economia.
+                O projeto utiliza React no frontend, IoT, e Python/FastAPI no backend, com integração
+                de dados e uma Inteligência Artificial real, a assistente Lume.
               </p>
+
               <div class="tag-row">
-                <span class="tag">React</span>
                 <span class="tag">Python</span>
                 <span class="tag">FastAPI</span>
                 <span class="tag">PostgreSQL</span>
                 <span class="tag">APIs REST</span>
+                <span class="tag">React</span>
                 <span class="tag">IA</span>
               </div>
+
               <div class="project-card__links">
-                <a class="btn btn--small" href="https://wattiz-quiz.vercel.app" target="_blank" rel="noreferrer">Demo</a>
-                <a class="btn btn--small btn--ghost" href="https://github.com/WattizOficial/Wattiz.git" target="_blank" rel="noreferrer">GitHub</a>
+                <a
+                  class="btn btn--small"
+                  href="https://wattiz-quiz.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Demo
+                </a>
+                <a
+                  class="btn btn--small btn--ghost"
+                  href="https://github.com/WattizOficial/Wattiz.git"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           </article>
 
           <article class="project-card" data-reveal style="--delay: 1">
             <div class="project-card__media project-card__media--mercadez">
+              <span class="project-card__label">Back-End + Dados</span>
               <img src="assets/images/precinho.png" alt="Precinho, mascote do Mercadez" />
             </div>
+
             <div class="project-card__body">
-              <h3>Mercadez</h3>
+              <div class="project-card__topline">
+                <h3>Mercadez</h3>
+                <span class="project-status">Em evolução</span>
+              </div>
+
+              <p class="project-card__role">Atuação: Desenvolvedor Back-End</p>
+
               <p class="project-card__desc">
-                Plataforma de comparação de preços desenvolvida para facilitar a busca por
-                produtos e ofertas. Possui interface web responsiva e está sendo estruturada
-                com React no frontend e Python no backend, utilizando APIs para gerenciamento
-                e disponibilização dos dados.
+                Plataforma de comparação de preços criada para facilitar a busca por produtos
+                e ofertas. O projeto está sendo estruturado com React no frontend e Python no
+                backend, utilizando APIs para gerenciamento e disponibilização dos dados.
               </p>
+
               <div class="tag-row">
-                <span class="tag">React</span>
-                <span class="tag">JavaScript</span>
                 <span class="tag">Python</span>
                 <span class="tag">FastAPI</span>
-                <span class="tag">APIs REST</span>
                 <span class="tag">PostgreSQL</span>
+                <span class="tag">APIs REST</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">React</span>
               </div>
+
               <div class="project-card__links">
-                <a class="btn btn--small btn--ghost" href="https://github.com/Tiasgod/mercadez-backend.git" target="_blank" rel="noreferrer">GitHub</a>
+                <a
+                  class="btn btn--small btn--ghost"
+                  href="https://github.com/Tiasgod/mercadez-backend.git"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           </article>
 
           <article class="project-card" data-reveal style="--delay: 2">
             <div class="project-card__media project-card__media--c6">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_C6_Bank.svg" alt="Logo C6 Bank" />
+              <span class="project-card__label">IA + Automação</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_C6_Bank.svg"
+                alt="Logo do C6 Bank"
+                loading="lazy"
+              />
             </div>
+
             <div class="project-card__body">
-              <h3>Automação de Vagas</h3>
+              <div class="project-card__topline">
+                <h3>Automação de Vagas</h3>
+                <span class="project-status">Projeto realizado</span>
+              </div>
+
+              <p class="project-card__role">Atuação: Desenvolvedor Líder</p>
+
               <p class="project-card__desc">
-                Projeto desenvolvido para o C6 Bank: um sistema que busca vagas
+                Projeto desenvolvido para o C6 Bank com o objetivo de buscar vagas
                 automaticamente por meio de Inteligência Artificial, reduzindo o trabalho
                 manual de pesquisa e centralizando as oportunidades encontradas.
               </p>
+
               <div class="tag-row">
                 <span class="tag">Python</span>
                 <span class="tag">IA</span>
                 <span class="tag">Automação</span>
               </div>
+
               <div class="project-card__links">
-                <a class="btn btn--small btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="btn btn--small btn--ghost btn--disabled" aria-disabled="true">GitHub em breve</span>
               </div>
             </div>
           </article>
 
+          <article class="project-card project-card--featured" data-reveal style="--delay: 3">
+            <div class="project-card__media project-card__media--ibm">
+              <span class="project-card__label">Em desenvolvimento</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/IBM%2C%20S%C3%A3o%20Paulo%2001.JPG"
+                alt="Edifício da IBM em São Paulo"
+                loading="lazy"
+              />
+              <div class="project-card__media-overlay"></div>
+            </div>
+
+            <div class="project-card__body">
+              <div class="project-card__topline">
+                <h3>Agente de IA Financeiro — IBM</h3>
+                <span class="project-status project-status--blue">Atual</span>
+              </div>
+
+              <p class="project-card__role">Atuação: Engenharia de IA</p>
+
+              <p class="project-card__desc project-card__desc--status">
+                Trabalhando atualmente nesse projeto. Mais informações em breve.
+              </p>
+
+              <div class="tag-row">
+                <span class="tag">Inteligência Artificial</span>
+                <span class="tag">Agentes de IA</span>
+                <span class="tag">Finanças</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="image-credit">
+          Foto da IBM: Wikimedia Commons, imagem em domínio público.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="stack" data-reveal>
+      <div class="section__inner">
+        <div class="section-heading">
+          <p class="section-kicker">Tecnologias</p>
+          <h2 class="section__title">Stack</h2>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__number">01</span>
+              <h3>Data &amp; Analytics</h3>
+            </div>
+            <p>Ferramentas para análise, tratamento e modelagem de dados.</p>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>Scikit-learn</span>
+              <span>Excel</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__number">02</span>
+              <h3>AI Engineering</h3>
+            </div>
+            <p>Estudos e aplicações envolvendo modelos de linguagem e sistemas de IA.</p>
+            <div class="skill-tags">
+              <span>LLMs</span>
+              <span>RAG</span>
+              <span>AI Agents</span>
+              <span>LangChain</span>
+              <span>OpenAI API</span>
+              <span>Ollama</span>
+              <span>Hugging Face</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__number">03</span>
+              <h3>Back-End</h3>
+            </div>
+            <p>Desenvolvimento de serviços, APIs e aplicações do lado do servidor.</p>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>Java</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>FastAPI</span>
+              <span>Spring</span>
+              <span>Node.js</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__head">
+              <span class="skill-card__number">04</span>
+              <h3>Databases &amp; DevOps</h3>
+            </div>
+            <p>Persistência de dados, ambientes Linux e ferramentas de desenvolvimento.</p>
+            <div class="skill-tags">
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Docker</span>
+              <span>Linux</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="tecnologias" data-reveal>
+    <section class="section section--alt" id="foco" data-reveal>
       <div class="section__inner">
-        <h2 class="section__title">Tecnologias</h2>
-        <ul class="pill-row">
-          <li>Python</li>
-          <li>React</li>
-          <li>Java</li>
-          <li>SQL</li>
-          <li>FastAPI</li>
-          <li>PostgreSQL</li>
-        </ul>
-      </div>
-    </section>
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="section-kicker">Direção atual</p>
+            <h2 class="section__title">O que estou aprofundando</h2>
+          </div>
+          <p class="section-heading__description">
+            Meu estudo atual está concentrado em Engenharia de IA, sem deixar de evoluir em dados,
+            Back-End, bancos de dados e arquitetura de aplicações.
+          </p>
+        </div>
 
-    <section class="section section--alt" id="funcoes" data-reveal>
-      <div class="section__inner">
-        <h2 class="section__title">Funções</h2>
-        <ul class="role-list">
-          <li><span class="role-list__project">Wattiz</span><span class="role-list__rule"></span><span class="role-list__role">Product Owner / Back-End</span></li>
-          <li><span class="role-list__project">Mercadez</span><span class="role-list__rule"></span><span class="role-list__role">Desenvolvedor Back-End</span></li>
-          <li><span class="role-list__project">C6 Bank</span><span class="role-list__rule"></span><span class="role-list__role">Desenvolvedor Líder</span></li>
-        </ul>
+        <div class="learning-grid">
+          <div class="learning-item">
+            <span>01</span>
+            <strong>Modelos de linguagem</strong>
+            <p>Aplicações com LLMs e integração entre modelos e sistemas de software.</p>
+          </div>
+
+          <div class="learning-item">
+            <span>02</span>
+            <strong>RAG e Agentes</strong>
+            <p>Exploração de arquiteturas que conectam modelos, dados e ferramentas.</p>
+          </div>
+
+          <div class="learning-item">
+            <span>03</span>
+            <strong>Dados + software</strong>
+            <p>Construção de soluções orientadas a dados com APIs e bancos de dados.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="formacao" data-reveal>
       <div class="section__inner">
-        <h2 class="section__title">Formação</h2>
-        <ul class="pill-row">
-          <li>FIAP</li>
-          <li>Fatec</li>
-          <li>Instituto PROA</li>
-        </ul>
+        <div class="section-heading">
+          <p class="section-kicker">Trajetória</p>
+          <h2 class="section__title">Formação</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card">
+            <span class="education-card__type">Ensino superior</span>
+            <h3>Fatec</h3>
+            <p>Análise e Desenvolvimento de Sistemas</p>
+          </article>
+
+          <article class="education-card">
+            <span class="education-card__type">Formação concluída</span>
+            <h3>FIAP</h3>
+            <p>Formação em tecnologia</p>
+          </article>
+
+          <article class="education-card">
+            <span class="education-card__type">Formação complementar</span>
+            <h3>Instituto PROA</h3>
+            <p>Desenvolvimento e preparação profissional</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="section section--alt" id="contato" data-reveal>
-    <div class="section__inner">
-      <h2 class="section__title">Contato</h2>
+  <footer class="section section--alt footer" id="contato" data-reveal>
+    <div class="section__inner footer__inner">
+      <div>
+        <p class="section-kicker">Vamos conversar?</p>
+        <h2 class="section__title">Contato</h2>
+        <p class="footer__text">
+          Estou aberto a oportunidades e projetos relacionados a dados, IA e desenvolvimento Back-End.
+        </p>
+      </div>
+
       <ul class="contact-row">
-        <li><a href="https://github.com/Tiasgod" target="_blank" rel="noreferrer">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/tiagopdias-02-2004-ti/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-        <li><a href="mailto:tigo4581@hotmail.com">E-mail</a></li>
+        <li>
+          <a href="https://github.com/Tiasgod" target="_blank" rel="noreferrer">GitHub</a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/tiagopdias-02-2004-ti/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:tigo4581@hotmail.com">E-mail</a>
+        </li>
       </ul>
     </div>
   </footer>
