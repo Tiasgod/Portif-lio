@@ -21,7 +21,7 @@ O conteúdo foi organizado para mostrar não apenas tecnologias, mas também **p
 
 ## Projetos exibidos
 
-- **Wattiz** — Product Owner / Back-End
+- **Wattiz** — Product Owner / Engenheiro de IA / Back-End
 - **Mercadez** — Desenvolvedor Back-End
 - **Automação de Vagas** — Desenvolvedor Líder
 - **Agente de IA Financeiro — IBM** — projeto em desenvolvimento
